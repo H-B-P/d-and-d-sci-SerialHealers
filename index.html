@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>D&D.Sci Evaluator for "Serial Healers"</title>
+</head>
+<body>
+  <div id="report" style="background-color:#cccccc;">
+  <br>
+  <div id="accarch"></div>
+  <br>
+  <div id="susarch"></div>
+  <br>
+  </div>
+  <br>
+  <div id="accuseLine"> "I'm confident that <select id=accMage>
+	  <option value="Archibald the Wise">Archibald the Wise</option>
+	  <option value="Archiwise the Bald">Archiwise the Bald</option>
+	  <option value="Averill">Averill</option>
+	  <option value="Azeru">Azeru</option>
+	  <option value="Boltholopew">Boltholopew</option>
+	  <option value="Burova">Burova</option>
+	  <option value="Cayn">Cayn</option>
+	  <option value="Danny Nova">Danny Nova</option>
+	  <option value="Dankon Ground">Dankon Ground</option>
+	  <option value="Gnarck">Gnarck</option>
+	  <option value="Gouberi">Gouberi</option>
+	  <option value="Lomerius Xardus">Lomerius Xardus</option>
+	  <option value="Moon Finder">Moon Finder</option>
+	  <option value="Nettie Silver">Nettie Silver</option>
+	  <option value="Penta Vasi">Penta Vasi</option>
+	  <option value="Ricewined">Ricewined</option>
+	  <option value="Tehami Darke">Tehami Darke</option>
+	  <option value="Yungreen">Yungreen</option>
+	  <option value="Zancro">Zancro</option>
+	  <option value="Zeledin Zura">Zeledin Zura</option>
+  </select> is complicit in the uncompensated healing of minor illnesses including <select id=accPlague>
+	  <option value="Babblepox">Babblepox</option>
+	  <option value="Bumblepox">Bumblepox</option>
+	  <option value="Chucklepox">Chucklepox</option>
+	  <option value="Disease Syndrome">Disease Syndrome</option>
+	  <option value="Disquietingly Serene Bowel Syndrome">Disquietingly Serene Bowel Syndrome</option>
+	  <option value="Gurglepox">Gurglepox</option>
+	  <option value="Mildly But Persistently Itchy Throat">Mildly But Persistently Itchy Throat</option>
+	  <option value="Parachondria">Parachondria</option>
+	  <option value="Problems Disorder">Problems Disorder</option>
+	  <option value="Rumblepox">Rumblepox</option>
+	  <option value="Scramblepox">Scramblepox</option>
+	  <option value="Scraped Elbow">Scraped Elbow</option>
+	  <option value="Scraped Knee">Scraped Knee</option>
+	  <option value="Smokesickness">Smokesickness</option>
+	  <option value="The Shivers">The Shivers</option>
+  </select>." <button onclick="accuse()">Accuse</button></div>
+  <br>
+  <br>
+  <div id="claimLine"> "Additionally, I suspect <select id=conMage1>
+	  <option value="Archibald the Wise">Archibald the Wise</option>
+	  <option value="Archiwise the Bald">Archiwise the Bald</option>
+	  <option value="Averill">Averill</option>
+	  <option value="Azeru">Azeru</option>
+	  <option value="Boltholopew">Boltholopew</option>
+	  <option value="Burova">Burova</option>
+	  <option value="Cayn">Cayn</option>
+	  <option value="Danny Nova">Danny Nova</option>
+	  <option value="Dankon Ground">Dankon Ground</option>
+	  <option value="Gnarck">Gnarck</option>
+	  <option value="Gouberi">Gouberi</option>
+	  <option value="Lomerius Xardus">Lomerius Xardus</option>
+	  <option value="Moon Finder">Moon Finder</option>
+	  <option value="Nettie Silver">Nettie Silver</option>
+	  <option value="Penta Vasi">Penta Vasi</option>
+	  <option value="Ricewined">Ricewined</option>
+	  <option value="Tehami Darke">Tehami Darke</option>
+	  <option value="Yungreen">Yungreen</option>
+	  <option value="Zancro">Zancro</option>
+	  <option value="Zeledin Zura">Zeledin Zura</option>
+  </select> is <select id=conQual>
+	  <option value="somehow illicitly linked to">somehow illicitly linked to</option>
+  	  <option value="the same person as">the same person as</option>
+	  <option value="stalking">stalking</option>
+	  <option value="having an affair with">having an affair with</option>
+  </select> <select id=conMage2>
+	  <option value="Archibald the Wise">Archibald the Wise</option>
+	  <option value="Archiwise the Bald">Archiwise the Bald</option>
+	  <option value="Averill">Averill</option>
+	  <option value="Azeru">Azeru</option>
+	  <option value="Boltholopew">Boltholopew</option>
+	  <option value="Burova">Burova</option>
+	  <option value="Cayn">Cayn</option>
+	  <option value="Danny Nova">Danny Nova</option>
+	  <option value="Dankon Ground">Dankon Ground</option>
+	  <option value="Gnarck">Gnarck</option>
+	  <option value="Gouberi">Gouberi</option>
+	  <option value="Lomerius Xardus">Lomerius Xardus</option>
+	  <option value="Moon Finder">Moon Finder</option>
+	  <option value="Nettie Silver">Nettie Silver</option>
+	  <option value="Penta Vasi">Penta Vasi</option>
+	  <option value="Ricewined">Ricewined</option>
+	  <option value="Tehami Darke">Tehami Darke</option>
+	  <option value="Yungreen">Yungreen</option>
+	  <option value="Zancro">Zancro</option>
+	  <option value="Zeledin Zura">Zeledin Zura</option>
+  </select>." <button onclick="claim()">Share suspicion</button>
+  </div>
+  <br>
+  <div id=repLine><button onclick="submit()">Submit Report</button></div>
+  <br>
+  <div id=totalLine></div>
+  <br>
+  <br>
+
+<script id="jsbin-javascript">
+
+accusations = {}
+suspicions = []
+
+dunnit=
+{"Nettie Silver":["Smokesickness"],
+"Danny Nova":["Babblepox","Bumblepox","Chucklepox","Gurglepox","Rumblepox","Scramblepox"],
+"Zancro":["Scraped Elbow","Scraped Knee"],
+"Lomerius Xardus":["Chucklepox"],
+"Tehami Darke":["Disquietingly Serene Bowel Syndrome"],
+"Dankon Ground":["Mildly But Persistently Itchy Throat","Gurglepox"],
+"Azeru":["Bumblepox","Scramblepox"],
+"Cayn":["Bumblepox","Scramblepox"],
+"Moon Finder":["Parachondria","Problems Disorder","Disease Syndrome"],
+"Boltholopew":["Parachondria","Problems Disorder","Disease Syndrome"],
+"Averill":["Rumblepox"],
+"Gouberi":["The Shivers"]
+}
+
+function checkListForList(lol, l){
+ return lol.some(list => JSON.stringify(list) === JSON.stringify(l))
+}
+
+function accuse(){
+ mag = document.getElementById("accMage").value
+ plag = document.getElementById("accPlague").value
+ if (!(mag in accusations)){
+  accusations[mag] = plag
+  document.getElementById("accarch").innerHTML += ("<div>I'm confident that <span class='mag'>"+mag+"</span> is complicit in the uncompensated healing of minor illnesses including <span class='plag'>"+plag+"</span>.</div><br>")
+ }
+}
+
+function claim(){
+ if (suspicions.length<8){
+ mag1 = document.getElementById("conMage1").value
+ con = document.getElementById("conQual").value
+ mag2 = document.getElementById("conMage2").value
+ if (!checkListForList(suspicions, [mag1,con,mag2])){
+  suspicions.push([mag1,con,mag2])
+  document.getElementById("susarch").innerHTML += ("<div>Additionally, I suspect <span class='mag1'>"+mag1+"</span> is <span class='con'>"+con+"</span> <span class='mag2'>"+mag2+"</span>.</div><br>")
+ }
+ }
+}
+
+function submit(){
+ gp=0
+ 
+ //Regarding the accusations . . .
+ accs=0
+ for (mag in accusations){
+  console.log(mag)
+  console.log(accs)
+  if (mag in dunnit){
+   if (dunnit[mag].includes(accusations[mag])){
+    document.querySelector('#accarch').children[2*accs].innerHTML+="  <span style='color:#007700'>Correct! (+1gp)</span>"
+    gp+=1
+   }
+   else{
+    document.querySelector('#accarch').children[2*accs].innerHTML+="  <span style='color:#ff0000'>Wrong! (-1gp)</span>"
+    gp-=1
+   }
+  }
+  else{
+   document.querySelector('#accarch').children[2*accs].innerHTML+="  <span style='color:#ff0000'>Wrong! (-1gp)</span>"
+   gp-=1
+  }
+  accs+=1
+ }
+ 
+ //Considering the claims . . .
+ 
+ gotAC=((["Bumblepox","Scramblepox"].includes(accusations["Azeru"])) + (["Bumblepox","Scramblepox"].includes(accusations["Cayn"])))
+ gotMB=((["Parachondria","Problems Disorder","Disease Syndrome"].includes(accusations["Moon Finder"])) + (["Parachondria","Problems Disorder","Disease Syndrome"].includes(accusations["Boltholopew"])))
+ for (c=0; c<suspicions.length; c++){
+  s = suspicions[c]
+  if ( (((s[0]=="Azeru") & (s[2]=="Cayn")) | ((s[0]=="Cayn") & (s[2]=="Azeru"))) & (["the same person as","somehow illicitly linked to"].includes(s[1]))){
+   if (gotAC==2){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but redundant)</span>"
+   }
+   else if (gotAC==1){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (+1gp)</span>"
+    gp+=1
+    gotAC=2
+   }
+   else if (gotAC==0){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but irrelevant)</span>"
+   }
+   break
+  }
+  
+  if ( (((s[0]=="Moon Finder") & (s[2]=="Boltholopew")) | ((s[0]=="Moon Finder") & (s[2]=="Boltholopew"))) & (s[1]=="somehow illicitly linked to")){
+   if (gotMB==2){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but redundant)</span>"
+   }
+   else if (gotMB==1){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (+1gp)</span>"
+    gp+=1
+    gotMB=2
+   }
+   else if (gotMB==0){
+    document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but irrelevant)</span>"
+   }
+   break
+  }
+  
+ if ((s[0]==s[2]) & (s[1]=="the same person as")){
+  document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but profoundly unhelpful)</span>"
+  break
+ }
+ 
+ document.querySelector('#susarch').children[2*c].innerHTML+="  <span style='color:#ff0000'>Wrong! (but it's not a formal accusation so you don't lose any money)</span>"
+ }
+ 
+ //Wrapping up . . .
+ 
+ document.getElementById("accuseLine").innerHTML=""
+ document.getElementById("claimLine").innerHTML=""
+ 
+ if (gp>1){
+  document.getElementById("repLine").innerHTML="The guilty parties are all paid appropriate amounts by those they healed; the Calderian government then fine appropriate amounts from the guilty parties, and award appropriate amounts to the victims in compensation. In the end, no-one is made better or worse off, but the Calderians seem convinced that justice has been done. You take your pay and depart."
+ }else{
+  document.getElementById("repLine").innerHTML="The Calderians, reviewing your performance, decide that you must be actively attempting to undermine their justice system. Instead of punishing you, they award you 1gp, on the basis that it's unfair for nations to only pay those working for their interests and not against them. You take your single coin and depart."
+  gp=1
+ }
+ 
+ document.getElementById("totalLine").innerHTML = ("You got " + gp + "gp!")
+ 
+}
+   
+
+
+</script>
+</body>
+</html>
