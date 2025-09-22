@@ -199,10 +199,9 @@ function submit(){
    else if (gotAC==0){
     document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but irrelevant)</span>"
    }
-   break
   }
   
-  if ( (((s[0]=="Moon Finder") & (s[2]=="Boltholopew")) | ((s[0]=="Moon Finder") & (s[2]=="Boltholopew"))) & (s[1]=="somehow illicitly linked to")){
+  else if ( (((s[0]=="Moon Finder") & (s[2]=="Boltholopew")) | ((s[0]=="Moon Finder") & (s[2]=="Boltholopew"))) & (s[1]=="somehow illicitly linked to")){
    if (gotMB==2){
     document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but redundant)</span>"
    }
@@ -214,15 +213,14 @@ function submit(){
    else if (gotMB==0){
     document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but irrelevant)</span>"
    }
-   break
   }
   
- if ((s[0]==s[2]) & (s[1]=="the same person as")){
-  document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but profoundly unhelpful)</span>"
-  break
+  else if ((s[0]==s[2]) & (s[1]=="the same person as")){
+   document.querySelector('#susarch').children[2*c].innerHTML+= "<span style='color:#007700'>Correct! (but profoundly unhelpful)</span>"
  }
- 
+ else{
  document.querySelector('#susarch').children[2*c].innerHTML+="  <span style='color:#ff0000'>Wrong! (but it's not a formal accusation so you don't lose any money)</span>"
+ }
  }
  
  //Wrapping up . . .
@@ -231,7 +229,7 @@ function submit(){
  document.getElementById("claimLine").innerHTML=""
  
  if (gp>1){
-  document.getElementById("repLine").innerHTML="The guilty parties are all paid appropriate amounts by those they healed; the Calderian government then fine appropriate amounts from the guilty parties, and award appropriate amounts to the victims in compensation. In the end, no-one is made better or worse off, but the Calderians seem convinced that justice has been done. You take your pay and depart."
+  document.getElementById("repLine").innerHTML="The guilty parties are all paid appropriate amounts by those they healed; the Calderian government then fine appropriate amounts from the guilty parties, and award appropriate amounts to the victims in compensation. In the end, no-one is made better or worse off, but the Calderians seem convinced that justice has been done. You take your pay from the government and depart."
  }else{
   document.getElementById("repLine").innerHTML="The Calderians, reviewing your performance, decide that you must be actively attempting to undermine their justice system. Instead of punishing you, they award you 1gp, on the basis that it's unfair for nations to only pay those working for their interests and not against them. You take your single coin and depart."
   gp=1
